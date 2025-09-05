@@ -22,6 +22,10 @@ public class MarsRover {
             else if (direction.equals("W"))
                 x -= 1;
         }
+        else if (command.equals("L")) {
+            if (direction.equals("N"))
+                direction = "W";
+        }
     }
 
     public int getY() {
