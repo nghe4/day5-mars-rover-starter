@@ -16,14 +16,7 @@ public class MarsRover {
             move();
         }
         else if (command.equals("L")) {
-            if (direction.equals("N"))
-                direction = "W";
-            else if (direction.equals("E"))
-                direction = "N";
-            else if (direction.equals("S"))
-                direction = "E";
-            else if (direction.equals("W"))
-                direction = "S";
+            turnLeft();
         }
         else if (command.equals("R")) {
             if (direction.equals("N"))
@@ -34,6 +27,23 @@ public class MarsRover {
                 direction = "W";
             else if (direction.equals("W"))
                 direction = "N";
+        }
+    }
+
+    private void turnLeft() {
+        switch (direction) {
+            case "N":
+                direction = "W";
+                break;
+            case "E":
+                direction = "N";
+                break;
+            case "S":
+                direction = "E";
+                break;
+            case "W":
+                direction = "S";
+                break;
         }
     }
 
@@ -53,6 +63,8 @@ public class MarsRover {
                 break;
         }
     }
+
+
 
     public int getY() {
         return y;
