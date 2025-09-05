@@ -14,7 +14,7 @@ public class MarsRover {
     public void executeCommand(String command) {
         switch (command) {
             case "M":
-                move();
+                moveForward();
                 break;
             case "L":
                 turnLeft();
@@ -59,7 +59,7 @@ public class MarsRover {
         }
     }
 
-    private void move() {
+    private void moveForward() {
         switch (direction) {
             case "N":
                 y += 1;
