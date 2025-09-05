@@ -17,6 +17,8 @@ public class MarsRover {
                 y += 1;
             else if (direction.equals("E"))
                 x += 1;
+            else if (direction.equals("S"))
+                y -= 1;
         }
     }
 
