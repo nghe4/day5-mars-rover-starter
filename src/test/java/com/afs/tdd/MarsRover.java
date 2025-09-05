@@ -76,8 +76,6 @@ public class MarsRover {
         }
     }
 
-
-
     public int getY() {
         return y;
     }
