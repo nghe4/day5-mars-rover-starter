@@ -13,14 +13,7 @@ public class MarsRover {
 
     public void executeCommand(String command) {
         if (command.equals("M")) {
-            if (direction.equals("N"))
-                y += 1;
-            else if (direction.equals("E"))
-                x += 1;
-            else if (direction.equals("S"))
-                y -= 1;
-            else if (direction.equals("W"))
-                x -= 1;
+            move();
         }
         else if (command.equals("L")) {
             if (direction.equals("N"))
@@ -41,6 +34,23 @@ public class MarsRover {
                 direction = "W";
             else if (direction.equals("W"))
                 direction = "N";
+        }
+    }
+
+    private void move() {
+        switch (direction) {
+            case "N":
+                y += 1;
+                break;
+            case "E":
+                x += 1;
+                break;
+            case "S":
+                y -= 1;
+                break;
+            case "W":
+                x -= 1;
+                break;
         }
     }
 
