@@ -226,4 +226,19 @@ class DemoTest {
         assertEquals(2, marsRover.getY());
         assertEquals("N", marsRover.getDirection());
     }
+
+    @Test
+    void should_return_x_neg1_y_1_direction_N_when_input_command_MLMR_direction_N() {
+        String command = "MLMR";
+        String direction = "N";
+        int x = 0;
+        int y = 0;
+
+        MarsRover marsRover = new MarsRover(x, y, direction);
+        marsRover.executeCommand(command);
+
+        assertEquals(-1, marsRover.getX());
+        assertEquals(1, marsRover.getY());
+        assertEquals("N", marsRover.getDirection());
+    }
 }
