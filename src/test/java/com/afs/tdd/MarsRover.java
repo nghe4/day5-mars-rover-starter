@@ -68,7 +68,14 @@ public class MarsRover {
     }
 
     void moveBackward() {
-        y--;
+        switch (direction) {
+            case "N":
+                y -= 1;
+                break;
+            case "E":
+                x -= 1;
+                break;
+        }
     }
 
     public int getY() {
