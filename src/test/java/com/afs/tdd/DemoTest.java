@@ -211,4 +211,21 @@ class DemoTest {
 
         assertEquals(1, marsRover.getX());
     }
+
+    @Test
+    void should_return_x_1_y_2_direction_N_when_input_command_MMRMLMB_direction_N() {
+        String command = "MMRMLMB";
+        String direction = "N";
+        int x = 0;
+        int y = 0;
+
+        MarsRover marsRover = new MarsRover(x, y, direction);
+        marsRover.executeCommand(command);
+
+        // After moving forward twice, turning right, moving forward,
+        // turning left, and moving forward again
+        assertEquals(1, marsRover.getX());
+        assertEquals(2, marsRover.getY());
+        assertEquals("N", marsRover.getDirection());
+    }
 }
