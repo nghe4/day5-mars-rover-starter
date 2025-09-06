@@ -75,6 +75,8 @@ public class MarsRover {
             case "E":
                 x -= 1;
                 break;
+            case "S":
+                y += 1;
         }
     }
 
