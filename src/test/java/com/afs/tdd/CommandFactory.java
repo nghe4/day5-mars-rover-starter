@@ -9,6 +9,8 @@ class CommandFactory {
                 return new TurnLeftCommand(marsRover);
             case "R":
                 return new TurnRightCommand(marsRover);
+            case "B":
+                return new MoveBackwardCommand(marsRover);
             default:
                 throw new IllegalArgumentException("Unknown command: " + commandType);
         }
