@@ -159,4 +159,17 @@ class DemoTest {
 
         assertEquals("N", marsRover.getDirection());
     }
+
+    @Test
+    void should_return_y_minus_when_input_command_B_direction_N() {
+        String command = "B";
+        String direction = "N";
+        int x = 0;
+        int y = 0;
+
+        MarsRover marsRover = new MarsRover(x, y, direction);
+        marsRover.executeCommand(command);
+
+        assertEquals(-1, marsRover.getY());
+    }
 }
