@@ -11,8 +11,8 @@ public class MarsRover {
         this.direction = direction;
     }
 
-    public void executeCommand(String command) {
-        for (char commandChar : command.toCharArray()) {
+    public void executeCommand(String commands) {
+        for (char commandChar : commands.toCharArray()) {
             Command commandObj = CommandFactory.createCommand(String.valueOf(commandChar), this);
             commandObj.execute();
         }
