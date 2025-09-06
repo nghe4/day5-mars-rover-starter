@@ -25,7 +25,7 @@ public class MarsRover {
         }
     }
 
-    private void turnRight() {
+    void turnRight() {
         switch (direction) {
             case "N":
                 direction = "E";
@@ -42,7 +42,7 @@ public class MarsRover {
         }
     }
 
-    private void turnLeft() {
+    void turnLeft() {
         switch (direction) {
             case "N":
                 direction = "W";
@@ -59,7 +59,7 @@ public class MarsRover {
         }
     }
 
-    private void moveForward() {
+    void moveForward() {
         switch (direction) {
             case "N":
                 y += 1;
