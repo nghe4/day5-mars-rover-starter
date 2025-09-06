@@ -12,10 +12,12 @@ public class MarsRover {
     }
 
     public void executeCommand(String commands) {
-        for (char commandChar : commands.toCharArray()) {
-            Command commandObj = CommandFactory.createCommand(String.valueOf(commandChar), this);
-            commandObj.execute();
-        }
+        commands.chars()
+                .mapToObj(c -> String.valueOf((char) c))
+                .forEach(command -> {
+                    Command commandObj = CommandFactory.createCommand(command, this);
+                    commandObj.execute();
+                });
     }
 
     void turnRight() {
