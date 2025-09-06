@@ -222,8 +222,6 @@ class DemoTest {
         MarsRover marsRover = new MarsRover(x, y, direction);
         marsRover.executeCommand(command);
 
-        // After moving forward twice, turning right, moving forward,
-        // turning left, and moving forward again
         assertEquals(1, marsRover.getX());
         assertEquals(2, marsRover.getY());
         assertEquals("N", marsRover.getDirection());
