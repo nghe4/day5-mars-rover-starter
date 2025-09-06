@@ -198,4 +198,17 @@ class DemoTest {
 
         assertEquals(1, marsRover.getY());
     }
+
+    @Test
+    void should_return_x_plus_when_input_command_B_direction_W() {
+        String command = "B";
+        String direction = "W";
+        int x = 0;
+        int y = 0;
+
+        MarsRover marsRover = new MarsRover(x, y, direction);
+        marsRover.executeCommand(command);
+
+        assertEquals(1, marsRover.getX());
+    }
 }
