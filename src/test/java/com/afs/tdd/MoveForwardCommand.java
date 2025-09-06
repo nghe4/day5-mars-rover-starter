@@ -1,7 +1,7 @@
 package com.afs.tdd;
 
-public class MoveCommand  extends Command {
-    public MoveCommand(MarsRover marsRover) {
+public class MoveForwardCommand extends Command {
+    public MoveForwardCommand(MarsRover marsRover) {
         super(marsRover);
     }
 
