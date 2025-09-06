@@ -12,17 +12,8 @@ public class MarsRover {
     }
 
     public void executeCommand(String command) {
-        switch (command) {
-            case "M":
-                moveForward();
-                break;
-            case "L":
-                turnLeft();
-                break;
-            case "R":
-                turnRight();
-                break;
-        }
+        Command commandObj = CommandFactory.createCommand(command, this);
+        commandObj.execute();
     }
 
     void turnRight() {
